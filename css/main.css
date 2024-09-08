@@ -1,0 +1,260 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #331010;
+    font-family: "Roboto", system-ui;
+}
+
+/* estilos de header */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #171717;
+    padding: 20px;
+}
+
+.logo-flex {
+    margin-left: 30px;
+}
+
+.logo-flex img {
+    width: 150px;
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    list-style: none;
+    padding: 10px;
+    margin: 10px;
+}
+
+header nav ul li a, 
+.snippet a {
+    background-color: #171717;
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px 0;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 20px;
+}
+
+/* estilos de footer */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #171717;
+    color: whitesmoke;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.footer-logo img {
+    width: 130px;
+}
+
+.footer-ig {
+    text-align: center;
+}
+
+.footer-ig img {
+    width: 40px;
+}
+
+/* estilos snippet */
+
+.snippets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: whitesmoke;
+}
+
+.snippet {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin: 40px 60px;
+}
+
+.snippet p {
+    margin: 10px 0;
+    padding: 10px 0;
+}
+
+.snippet img {
+    width:330px;
+}
+
+.snippet a {
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+}
+
+.reviews-snippet, .merch-snippet {
+    flex-direction: row-reverse;
+}
+
+/* main */
+main {
+    margin: 50px auto;
+    width: 70%;
+    text-align: center;
+}
+
+main h1 {
+    font-weight: 500;
+    font-style: italic;
+    display: block;
+    color: whitesmoke;
+    width: 100%;
+    border-bottom: 3px solid whitesmoke;
+    margin: 50px auto;
+}
+
+/* sobre mi */
+
+.about-me-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    color: whitesmoke;
+}
+
+/* recomendaciones */
+
+.reviews-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    gap: 20px;
+}
+
+.review-item {
+    display: flex;
+    gap: 10px;
+    text-align: center;
+    width: 30%;
+    height: 200px;
+    border: 3px solid #171717;
+    font-size: 15px;
+    background-color: whitesmoke;
+}
+
+.review-item img {
+    width: 100px;
+}
+
+.score {
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+/* contact */
+
+.eventos-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    gap: 20px;
+}
+
+.evento-item {
+    display: flex;
+    gap: 10px;
+    border: 3px solid #171717;
+    font-size: 15px;
+    background-color: whitesmoke;
+}
+
+.evento-item img {
+    width: 35%;
+}
+
+.evento-text {
+    padding: 20px;
+    text-align: left;
+}
+
+.evento-text h2 {
+    margin-bottom: 15px;
+    text-decoration: underline;
+}
+
+/* formulario de contacto */
+
+.contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    gap: 20px;
+}
+
+.contact-form form {
+    width: 70%;
+    background-color: whitesmoke;
+}
+
+legend {
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* merch */
+
+.merch-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    gap: 20px;
+}
+
+.merch-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 45%;
+    height: 300px;
+    border: 3px solid #171717;
+    font-size: 15px;
+    background-color: whitesmoke;
+}
+
+.merch-item img {
+    width: 150px;
+}
+
+.tallas {
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.price {
+    font-weight: 500;
+    margin-top: 10px;
+    font-size: 25px;
+}
