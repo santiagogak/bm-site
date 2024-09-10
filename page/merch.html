@@ -16,20 +16,40 @@
 <body>
     <!-- encabezado -->
     <header>
-        <div class="logo-flex">
-            <img src="../img/BARBA_LOGO-08.png" alt="Logo BM">
-        </div>
-        <div>
-            <nav>
-                <ul class="nav-flex">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="about.html">Sobre BarbaMalteada</a></li>
-                    <li><a href="reviews.html">Recomendaciones</a></li>
-                    <li><a href="contact.html">Eventos y Contacto</a></li>
-                    <li><a href="merch.html">Merch</a></li>
-                </ul>
-            </nav>
-        </div>
+
+        <nav class="navbar navbar-expand-md navbar-dark" aria-label="Third navbar example">
+            <div class="container-fluid">
+                <a class="navbar-brand logo-home" href="../index.html">
+                    <img src="../img/BARBA_LOGO-08.png" alt="Logo BM">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#menu-nav" aria-controls="menu-nav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-lg-end justify-content-md-center"
+                    id="menu-nav">
+                    <ul class="navbar-nav mb-2 mb-sm-0">
+                        <li class="nav-item px-3">
+                            <a class="nav-link p-link" aria-current="page" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link p-link" href="about.html">Sobre BarbaMalteada</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link p-link" href="reviews.html">Recomendaciones</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link p-link" href="contact.html">Eventos y Contactos</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link p-link active" href="merch.html">Merch</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
     </header>
 

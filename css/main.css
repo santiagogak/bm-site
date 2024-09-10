@@ -12,19 +12,15 @@ body {
 
 /* estilos de header */
 header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
     background-color: #171717;
     padding: 20px;
 }
 
-.logo-flex {
+.logo-home {
     margin-left: 30px;
 }
 
-.logo-flex img {
+.logo-home img {
     width: 150px;
 }
 
@@ -39,16 +35,17 @@ header {
     margin: 10px;
 }
 
-header nav ul li a, 
-.snippet a {
-    background-color: #171717;
-    color: whitesmoke;
-    text-decoration: none;
+.p-link {
     padding: 10px;
     margin: 10px 0;
     font-weight: 500;
     font-style: italic;
-    font-size: 20px;
+}
+
+@media (min-width: 768px) {
+    .p-link {
+        font-size: 1.4vw;
+    }
 }
 
 /* estilos de footer */
@@ -103,6 +100,14 @@ footer {
 }
 
 .snippet a {
+    background-color: #171717;
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px 0;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 20px;
     border: 2px solid whitesmoke;
     border-radius: 10px;
 }
@@ -238,7 +243,7 @@ legend {
     align-items: center;
     gap: 10px;
     width: 45%;
-    height: 300px;
+    padding: 15px;
     border: 3px solid #171717;
     font-size: 15px;
     background-color: whitesmoke;
