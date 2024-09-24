@@ -1,0 +1,288 @@
+@import "utilities/variables";
+@import "utilities/mixin";
+@import "utilities/reset";
+
+// Extensible base for images
+%responsive-img {
+    width: 100%;
+    object-fit: cover;
+}
+
+
+body {
+    background-color: $primary-color;
+    font-family: $font-primary;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+// Estilos de header
+header {
+    background-color: $secondary-color;
+
+    .logo-home {
+        margin-left: 30px;
+
+        img {
+            width: 170px;
+        }
+    }
+}
+
+// Botones de navbar
+.p-link {
+    padding: 10px;
+    margin: 10px 0;
+    font-weight: 500;
+    font-style: italic;
+
+    @media (min-width: 768px) {
+        font-size: 1.4vw;
+    }
+}
+
+.bm-bg-navbar {
+    background-color: $secondary-color;
+}
+
+// Estilos de footer
+footer {
+    @include flex-center;
+    justify-content: space-between;
+    background-color: $secondary-color;
+    color: $text-color-light;
+    padding: 20px;
+    margin-top: 20px;
+    
+    .footer-logo img {
+        width: 130px;
+    }
+    
+    .footer-ig {
+        text-align: center;
+        
+        img {
+            width: 40px;
+        }
+    }
+}
+
+// Main styles
+main {
+    margin: 0px auto 50px auto;
+    width: 70%;
+    text-align: center;
+
+    h1 {
+        font-weight: 500;
+        font-style: italic;
+        color: $text-color-dark;
+        width: 100%;
+        border-bottom: 3px solid $text-color-dark;
+        margin: 50px auto;
+    }
+
+    .main-img {
+        img {
+            margin-top: 0px;
+            height: 200px;
+            @extend %responsive-img;
+        }
+    }
+}
+
+// Snippet section
+.snippets {
+    @include flex-center;
+    flex-direction: column;
+    color: $text-color-dark;
+    
+    .snippet {
+        @include flex-wrap-center;
+        gap: 30px;
+        margin: 40px 0px;
+        
+        .snippet-img {
+            width: 100%;
+            img {
+                width: 100%;
+            }
+            @media (min-width: 768px) {
+                width: 25%;
+            }
+        }
+        
+        .snippet-descr {
+            width: 100%;
+            p {
+                margin: 10px 0;
+                padding: 10px 0;
+            }
+            a {
+                background-color: $secondary-color;
+                color: $text-color-light;
+                text-decoration: none;
+                padding: 10px;
+                margin: 10px 0;
+                font-weight: 500;
+                font-style: italic;
+                font-size: 20px;
+                border: 2px solid $text-color-light;
+                border-radius: 10px;
+            }
+            @media (min-width: 768px) {
+                text-align: left;
+                width: 65%;
+            }
+        }
+    }
+
+    .reviews-snippet,
+    .merch-snippet {
+        flex-direction: row-reverse;
+
+    }
+
+
+}
+
+
+// Sobre BM
+.about-me-flex {
+    @include flex-center;
+    flex-direction: column;
+    gap: 50px;
+    color: $text-color-dark;
+
+    .about-me-img {
+        padding: 20px;
+
+        img {
+            @extend %responsive-img;
+        }
+    }
+}
+
+iframe {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    iframe {
+        width: 560px;
+    }
+}
+
+// Recomendaciones BM
+.reviews {
+    display: block;
+
+    @media screen and (min-width: 768px) {
+        @include grid-layout(5,2);
+    }
+
+    @media screen and (min-width: 1040px) {
+        @include grid-layout(3,3);
+    }
+
+    .review-item {
+        @include grid-review-item;
+        border: 3px solid $border-color;
+        border-radius: 20px;
+        padding: 10px;
+        margin-bottom: 20px;
+        background-color: $bg-review-color;
+
+        .review-img img {
+            @extend %responsive-img;
+        }
+
+        .review-text {
+            padding: 5px;
+            font-size: 14px;
+            text-align: left;
+        }
+
+        .score {
+            grid-column: span 2;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+    }
+}
+
+// Eventos y Contacto
+.eventos-flex {
+    @include flex-wrap-center;
+    gap: 20px;
+
+    .evento-item {
+        display: flex;
+        flex-wrap: wrap;
+        @media screen and (min-width: 768px) {
+            flex-wrap: nowrap;
+        }
+        gap: 10px;
+        border: 3px solid $secondary-color;
+        background-color: $bg-review-color;
+
+        img {
+            width: 35%;
+        }
+
+        .evento-text {
+            padding: 20px;
+            text-align: left;
+
+            h2 {
+                margin-bottom: 15px;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+// Contact form section
+.contact-form {
+    @include flex-wrap-center;
+
+    form {
+        width: 70%;
+        background-color: $bg-review-color;
+    }
+}
+
+// Merch
+.merch {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: center;
+    gap: 20px;
+
+    @media (min-width: 576px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .merch-item {
+        @include flex-center;
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+        border: 3px solid $secondary-color;
+        background-color: $bg-review-color;
+
+        img {
+            width: 150px;
+        }
+
+        .tallas,
+        .price {
+            font-weight: 500;
+            margin-top: 10px;
+        }
+
+        .price {
+            font-size: 25px;
+        }
+    }
+}

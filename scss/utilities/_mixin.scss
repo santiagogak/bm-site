@@ -1,0 +1,28 @@
+// Mixin
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-wrap-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+@mixin grid-layout($rows, $columns) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    grid-template-rows: repeat($rows, 1fr);
+    gap: 10px;
+}
+
+@mixin grid-review-item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 75% 25%;
+    align-items: center;
+    gap: 8px;
+}
