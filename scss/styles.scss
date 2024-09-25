@@ -1,97 +1,10 @@
 @import "utilities/variables";
 @import "utilities/mixin";
-@import "utilities/reset";
-
-// Extensible base for images
-%responsive-img {
-    width: 100%;
-    object-fit: cover;
-}
+@import "base/reset";
+@import "base/layout";
 
 
-body {
-    background-color: $primary-color;
-    font-family: $font-primary;
-    font-optical-sizing: auto;
-    font-style: normal;
-}
-
-// Estilos de header
-header {
-    background-color: $secondary-color;
-
-    .logo-home {
-        margin-left: 30px;
-
-        img {
-            width: 170px;
-        }
-    }
-}
-
-// Botones de navbar
-.p-link {
-    padding: 10px;
-    margin: 10px 0;
-    font-weight: 500;
-    font-style: italic;
-
-    @media (min-width: 768px) {
-        font-size: 1.4vw;
-    }
-}
-
-.bm-bg-navbar {
-    background-color: $secondary-color;
-}
-
-// Estilos de footer
-footer {
-    @include flex-center;
-    justify-content: space-between;
-    background-color: $secondary-color;
-    color: $text-color-light;
-    padding: 20px;
-    margin-top: 20px;
-    
-    .footer-logo img {
-        width: 130px;
-    }
-    
-    .footer-ig {
-        text-align: center;
-        
-        img {
-            width: 40px;
-        }
-    }
-}
-
-// Main styles
-main {
-    margin: 0px auto 50px auto;
-    width: 70%;
-    text-align: center;
-
-    h1 {
-        font-weight: 500;
-        font-style: italic;
-        color: $text-color-dark;
-        width: 100%;
-        border-bottom: 3px solid $text-color-dark;
-        margin: 50px auto;
-    }
-
-    .main-img {
-        img {
-            margin-top: 0px;
-            height: 200px;
-            @extend %responsive-img;
-        }
-    }
-}
-
-// Snippet section
+// Snippets de Home
 .snippets {
     @include flex-center;
     flex-direction: column;
@@ -103,6 +16,7 @@ main {
         margin: 40px 0px;
         
         .snippet-img {
+            @include img-box-style;
             width: 100%;
             img {
                 width: 100%;
@@ -119,16 +33,10 @@ main {
                 padding: 10px 0;
             }
             a {
+                @include btn-primary;
                 background-color: $secondary-color;
                 color: $text-color-light;
-                text-decoration: none;
-                padding: 10px;
-                margin: 10px 0;
-                font-weight: 500;
-                font-style: italic;
-                font-size: 20px;
                 border: 2px solid $text-color-light;
-                border-radius: 10px;
             }
             @media (min-width: 768px) {
                 text-align: left;
@@ -155,10 +63,10 @@ main {
     color: $text-color-dark;
 
     .about-me-img {
-        padding: 20px;
+        @include img-box-style;
 
         img {
-            @extend %responsive-img;
+            width: 100%;
         }
     }
 }
@@ -187,14 +95,11 @@ iframe {
 
     .review-item {
         @include grid-review-item;
-        border: 3px solid $border-color;
-        border-radius: 20px;
-        padding: 10px;
+        @include img-box-style;
         margin-bottom: 20px;
-        background-color: $bg-review-color;
 
         .review-img img {
-            @extend %responsive-img;
+            width: 100%;
         }
 
         .review-text {
@@ -223,11 +128,15 @@ iframe {
             flex-wrap: nowrap;
         }
         gap: 10px;
-        border: 3px solid $secondary-color;
-        background-color: $bg-review-color;
-
+        @include img-box-style;
+        
         img {
-            width: 35%;
+            width: 100%;
+            padding: 10px;
+            margin: 0px auto;
+            @media screen and (min-width: 768px) {
+                width: 35%;
+            }
         }
 
         .evento-text {
@@ -242,17 +151,50 @@ iframe {
     }
 }
 
-// Contact form section
+// Estilos Formulario Contacto
 .contact-form {
-    @include flex-wrap-center;
+    @include img-box-style;
+    margin-top: 50px;
+}
 
-    form {
-        width: 70%;
-        background-color: $bg-review-color;
+form {
+    fieldset{
+
+        .form-input {
+            padding: 0px 20px;
+            label {
+                display: block;
+                text-align: left;
+            }
+            input, textarea {
+                display: block;
+                width: 100%;
+            }
+            textarea {
+                height: 150px;
+            }
+        }
+
+        .form-submit {
+            @include btn-primary;
+            background-color: $bg-review-color;
+            color: $text-color-dark;
+            border: 2px solid $border-color;
+            margin: 20px auto;
+            display: inline-block;
+        }
+
+        @media screen and (min-width: 768px) {   
+            @include grid-layout(5,2);
+            grid-template-rows: 1fr 1fr 1fr auto 1fr;
+            legend, .form-comments, .form-submit {
+                grid-column: span 2;
+            }
+        }
     }
 }
 
-// Merch
+// Estilos de Merch
 .merch {
     display: grid;
     grid-template-columns: 1fr;
