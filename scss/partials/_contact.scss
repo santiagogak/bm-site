@@ -1,0 +1,87 @@
+
+// Estilo de pagina de Eventos y Contacto
+.eventos-flex {
+    @include flex-wrap-center;
+    gap: 20px;
+
+    .evento-item {
+        display: flex;
+        flex-wrap: wrap;
+        @media screen and (min-width: 768px) {
+            flex-wrap: nowrap;
+        }
+        gap: 10px;
+        @include img-box-style;
+        
+        .evento-img {
+            width: 100%;
+            @media screen and (min-width: 768px) {
+                width: 40%;
+            }
+            padding: 10px;
+            margin: 0px auto;
+            img {
+                width: 100%;
+            }
+        }
+
+        .evento-text {
+            width: 100%;
+            font-size: 12px;
+            @media screen and (min-width: 768px) {
+                width: 60%;
+                font-size: 1vw;
+            }
+            padding: 20px;
+            text-align: left;
+
+            h2 {
+                margin-bottom: 15px;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+// Estilos Formulario Contacto
+.contact-form {
+    @include img-box-style;
+    margin-top: 50px;
+}
+
+form {
+    fieldset{
+
+        .form-input {
+            padding: 0px 20px;
+            label {
+                display: block;
+                text-align: left;
+            }
+            input, textarea {
+                display: block;
+                width: 100%;
+            }
+            textarea {
+                height: 150px;
+            }
+        }
+
+        .form-submit {
+            @include btn-primary;
+            background-color: $bg-review-color;
+            color: $text-color-dark;
+            border: 2px solid $border-color;
+            margin: 20px auto;
+            display: inline-block;
+        }
+
+        @media screen and (min-width: 768px) {   
+            @include grid-layout(5,2);
+            grid-template-rows: 1fr 1fr 1fr auto auto;
+            legend, .form-comments, .form-submit {
+                grid-column: span 2;
+            }
+        }
+    }
+}

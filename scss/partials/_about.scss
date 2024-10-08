@@ -1,0 +1,29 @@
+// Estilos página Sobre BM
+.about-me-flex {
+    @include flex-center;
+    flex-direction: column;
+    gap: 50px;
+    color: $text-color-dark;
+
+    .about-me-img {
+        @include img-box-style;
+
+        img {
+            width: 100%;
+        }
+    }
+    .about-me-text {
+        font-size: 20px;
+        text-align: justify;
+    }
+}
+
+iframe {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    iframe {
+        width: 560px;
+    }
+}

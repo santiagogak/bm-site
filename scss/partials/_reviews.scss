@@ -1,0 +1,37 @@
+// Estilos para pagina Recomendaciones BM
+.reviews {
+    display: block;
+
+    @media screen and (min-width: 768px) {
+        @include grid-layout(5,2);
+    }
+
+    @media screen and (min-width: 1040px) {
+        @include grid-layout(3,3);
+    }
+
+    .review-item {
+        @include grid-review-item;
+        @include img-box-style;
+        margin-bottom: 20px;
+        .review-img img {
+            padding: 5px;
+            width: 100%;
+        }
+
+        .review-text {
+            padding: 5px;
+            font-size: 12px;
+            text-align: left;
+            .review-title {
+                font-weight: 500;
+            }
+        }
+
+        .score {
+            grid-column: span 2;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+    }
+}
