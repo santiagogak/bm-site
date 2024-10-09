@@ -13,6 +13,7 @@
     .review-item {
         @include grid-review-item;
         @include img-box-style;
+        padding: 20px;
         margin-bottom: 20px;
         .review-img img {
             padding: 5px;
@@ -21,7 +22,7 @@
 
         .review-text {
             padding: 5px;
-            font-size: 12px;
+            font-size: 11px;
             text-align: left;
             .review-title {
                 font-weight: 500;
