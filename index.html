@@ -13,6 +13,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- CSS principal -->
     <link rel="stylesheet" href="css/main.css">
     <title>BarbaMalteada Home</title>
@@ -64,7 +66,7 @@
 
         <!-- snippet sobre mi -->
         <div class="snippets">
-            <div class="about-me-snippet snippet">
+            <div data-aos="fade-up" class="about-me-snippet snippet">
                 <div class="snippet-img">
                     <img src="img/sobre-mi-snippet.jpg" alt="Sobre Mi Imagen para snippet de Home">
                 </div>
@@ -73,7 +75,7 @@
                     <a href="page/about.html">Sobre BarbaMalteada</a>
                 </div>
             </div>
-            <div class="reviews-snippet snippet">
+            <div data-aos="fade-up" class="reviews-snippet snippet">
                 <div class="snippet-img">
                     <img src="img/recomendaciones-snippet.jpeg" alt="Recomendaciones Imagen para snippet de Home">
                 </div>
@@ -82,7 +84,7 @@
                     <a href="page/reviews.html">Recomendaciones BM</a>
                 </div>
             </div>
-            <div class="contact-snippet snippet">
+            <div data-aos="fade-up" class="contact-snippet snippet">
                 <div class="snippet-img">
                     <img src="img/clases2.jpg" alt="Eventos Imagen para snippet de Home">
                 </div>
@@ -91,7 +93,7 @@
                     <a href="page/contact.html">Eventos BM</a>
                 </div>
             </div>
-            <div class="merch-snippet snippet">
+            <div data-aos="fade-up" class="merch-snippet snippet">
                 <div class="snippet-img">
                     <img src="img/BARBA_LOGO-07.png" alt="Merch Imagen para snippet de Home">
                 </div>
@@ -123,6 +125,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- CSS principal -->
     <link rel="stylesheet" href="../css/main.css">
     <title>BarbaMalteada Merch</title>
@@ -64,36 +66,36 @@
         <div class="merch">
 
             <!-- producto -->
-            <div class="merch-item">
+            <div data-aos="flip-up" class="merch-item">
                 <img src="../img/camiseta_negra.jpg" alt="Imagen Camiseta Negra BM">
                 <p>CAMISETA NEGRA BARBAMALTEADA</p>
                 <p class="tallas">Tallas S - M - L - XL</p>
                 <p class="price">$15</p>
             </div>
 
-            <div class="merch-item">
+            <div data-aos="flip-up" class="merch-item">
                 <img src="../img/camiseta_blanca.webp" alt="Imagen Camiseta Blanca BM">
                 <p>CAMISETA BLANCA BARBAMALTEADA</p>
                 <p class="tallas">Tallas S - M - L - XL</p>
                 <p class="price">$15</p>
             </div>
-            <div class="merch-item">
+            <div data-aos="flip-up" class="merch-item">
                 <img src="../img/copa.webp" alt="Imagen Copa Cervecera">
                 <p>COPA CERVECERA SPIGELAU</p>
                 <p class="price">$10</p>
             </div>
-            <div class="merch-item">
+            <div data-aos="flip-up" class="merch-item">
                 <img src="../img/hoodie.jpg" alt="Imagen Hoodie BM">
                 <p>HOODIE BARBAMALTEADA</p>
                 <p class="tallas">Tallas S - M - L - XL</p>
                 <p class="price">$35</p>
             </div>
-            <div class="merch-item">
+            <div data-aos="flip-up" class="merch-item">
                 <img src="../img/kit_cata.jpg" alt="Imagen Kit Cata">
                 <p>KIT CATA CERVECERA</p>
                 <p class="price">$40</p>
             </div>
-            <div class="merch-item">
+            <div data-aos="flip-up" class="merch-item">
                 <img src="../img/destapador.webp" alt="Imagen Destapador">
                 <p >DESTAPADOR DE CERVEZA TEMÁTICO</p>
                 <p class="price">$5</p>
@@ -118,5 +120,9 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>
